@@ -1,2 +1,0 @@
-# consulting
-Consulting Services
