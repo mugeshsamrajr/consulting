@@ -1,0 +1,8 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" fill="none">
+  <rect width="800" height="600" rx="40" fill="#111827" />
+  <circle cx="200" cy="210" r="110" fill="#2563eb" opacity="0.95" />
+  <rect x="370" y="130" width="320" height="240" rx="28" fill="#1e293b" />
+  <path d="M398 178h256v32H398zM398 238h256v20H398zM398 286h180v20H398z" fill="#60a5fa" />
+  <circle cx="460" cy="370" r="52" fill="#7dd3fc" opacity="0.9" />
+  <text x="50%" y="520" dominant-baseline="middle" text-anchor="middle" fill="#e2e8f0" font-family="Inter, sans-serif" font-size="42" font-weight="700">Consultancy</text>
+</svg>

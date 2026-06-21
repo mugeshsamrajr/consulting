@@ -10,7 +10,7 @@ export default function Header() {
         <div className="flex h-20 items-center justify-between">
           <Link href="/">
             <span className="text-xl font-bold text-[var(--text-primary)]">
-              URM Consulting
+              Consulting
             </span>
           </Link>
 

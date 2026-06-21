@@ -1,8 +1,8 @@
 export const navigation = [
-  {
-    label: "Consultancy",
-    href: "/services",
-  },
+  // {
+  //   label: "Consultancy",
+  //   href: "/services",
+  // },
   {
     label: "Resources",
     href: "/resources",

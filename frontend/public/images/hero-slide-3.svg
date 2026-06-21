@@ -1,0 +1,8 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" fill="none">
+  <rect width="800" height="600" rx="40" fill="#111827" />
+  <rect x="100" y="160" width="600" height="280" rx="40" fill="#1f2937" />
+  <path d="M180 240h120v32H180zM180 300h390v28H180zM180 356h240v28H180z" fill="#60a5fa" />
+  <circle cx="620" cy="220" r="50" fill="#38bdf8" opacity="0.9" />
+  <circle cx="620" cy="320" r="38" fill="#2563eb" opacity="0.9" />
+  <text x="50%" y="520" dominant-baseline="middle" text-anchor="middle" fill="#e2e8f0" font-family="Inter, sans-serif" font-size="42" font-weight="700">Case Study</text>
+</svg>

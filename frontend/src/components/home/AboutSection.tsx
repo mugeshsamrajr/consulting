@@ -15,12 +15,12 @@ export default function AboutSection() {
       <Container>
         <SectionTitle
           subtitle="About URM"
-          title="URM Consulting Services (URM)"
+          title="Consulting Services (URM)"
         />
 
         <div className="max-w-5xl space-y-8">
           <p className="text-lg leading-8 text-slate-600 dark:text-slate-300">
-            URM Consulting Services (URM) is dedicated to
+            Consulting Services (URM) is dedicated to
             providing high quality, cost-effective and tailored
             consultancy and training in the areas of cyber and
             information security, data protection, business

@@ -17,7 +17,7 @@ export default function Footer() {
           {/* Company Info */}
           <div>
             <h3 className="text-2xl font-bold">
-              URM Consulting
+              Consulting
             </h3>
 
             <p className="mt-4 text-sm leading-7 text-slate-400">
@@ -114,7 +114,7 @@ export default function Footer() {
         <div className="flex flex-col items-center justify-between gap-6 border-t border-slate-800 py-8 md:flex-row">
           <div className="text-center md:text-left">
             <p className="text-sm text-slate-400">
-              © Copyright 2026 URM Consulting Services
+              © Copyright 2026 Consulting Services
               Ltd. All Rights Reserved.
             </p>
 
