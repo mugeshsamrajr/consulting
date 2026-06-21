@@ -47,7 +47,7 @@ export async function POST(request: Request) {
 
     return NextResponse.json({ success: true, data }, { status: 200 });
   } catch (error: any) {
-    console.error("Internal Resend API Server Error:", error);
+    console.error("Internal Resend API Server Error:err", error);
     return NextResponse.json(
       { error: error.message || "Failed to dispatch outgoing message email routing." },
       { status: 500 }
