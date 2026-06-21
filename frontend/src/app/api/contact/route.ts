@@ -2,11 +2,21 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
-// Initialize Resend with your secret API key safely stored on the server environment
-const resend = new Resend(process.env.RESEND_API_KEY);
+// Fallback to a mock string strictly during build execution to prevent compiler failure
+const apiKey = process.env.RESEND_API_KEY || "re_mockKeyForBuildTime_123";
+const resend = new Resend(apiKey);
 
 export async function POST(request: Request) {
   try {
+    // 1. Operational Guard: Catch if the key wasn't added to the dashboard runtime
+    if (!process.env.RESEND_API_KEY) {
+      console.error("Missing environment configuration: RESEND_API_KEY is not defined.");
+      return NextResponse.json(
+        { error: "Email service infrastructure is currently misconfigured." },
+        { status: 500 }
+      );
+    }
+
     const body = await request.json();
     const { name, email, subject, message } = body;
 
@@ -20,11 +30,11 @@ export async function POST(request: Request) {
 
     // Trigger the email sending sequence via Resend
     const data = await resend.emails.send({
-      from: "URM Contact Form <onboarding@resend.dev>", // Resend gives you this default domain for testing
+      from: "URM Contact Form <onboarding@resend.dev>", // Resend default domain for testing
       to: ["mugeshsamraj@gmail.com"], // Your target destination email
       subject: `[URM Enquiry] ${subject}`,
       html: `
-        <div style="font-family: sans-serif; padding: 20px; color: #333; max-width: 600px; border: 1px solid #eee; rounded: 8px;">
+        <div style="font-family: sans-serif; padding: 20px; color: #333; max-width: 600px; border: 1px solid #eee; border-radius: 8px;">
           <h2 style="color: #4f46e5; border-bottom: 2px solid #eee; padding-bottom: 10px;">New Website Contact Submission</h2>
           <p><strong>Name:</strong> ${name}</p>
           <p><strong>Sender Email:</strong> <a href="mailto:${email}">${email}</a></p>
